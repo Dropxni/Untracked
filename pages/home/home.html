@@ -1,1 +1,418 @@
-<p>home works!</p>,
+<div class="min-h-screen bg-[#f8fafc] text-slate-900">
+
+  <!-- MOBILE TOPBAR -->
+  <header
+    class="lg:hidden sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200">
+
+    <div class="flex items-center justify-between px-5 py-4">
+
+      <div>
+
+        <h1 class="text-2xl font-black tracking-tight">
+          Vertex
+        </h1>
+
+        <p class="text-xs text-slate-500 mt-1">
+          Admin Dashboard
+        </p>
+
+      </div>
+
+      <button
+        class="w-11 h-11 rounded-2xl border border-slate-200 flex items-center justify-center bg-white shadow-sm">
+
+        ☰
+
+      </button>
+
+    </div>
+
+  </header>
+
+  <div class="flex">
+
+    <!-- SIDEBAR -->
+    <aside
+      class="hidden lg:flex flex-col w-72 min-h-screen bg-white border-r border-slate-200">
+
+      <!-- LOGO -->
+      <div class="px-8 py-8 border-b border-slate-200">
+
+        <h1 class="text-4xl font-black tracking-tight">
+          Vertex
+        </h1>
+
+        <p class="text-slate-500 mt-2 text-sm">
+          Professional Admin Platform
+        </p>
+
+      </div>
+
+      <!-- MENU -->
+      <nav class="flex-1 px-5 py-8 space-y-2">
+
+        <button
+          class="w-full flex items-center gap-4 px-5 py-4 rounded-2xl bg-slate-900 text-white font-semibold shadow-lg">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+
+            🏠
+
+          </div>
+
+          Dashboard
+
+        </button>
+
+        <button
+          class="w-full flex items-center gap-4 px-5 py-4 rounded-2xl hover:bg-slate-100 transition font-medium">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center">
+
+            📊
+
+          </div>
+
+          Analytics
+
+        </button>
+
+        <button
+          class="w-full flex items-center gap-4 px-5 py-4 rounded-2xl hover:bg-slate-100 transition font-medium">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center">
+
+            👥
+
+          </div>
+
+          Usuarios
+
+        </button>
+
+        <button
+          class="w-full flex items-center gap-4 px-5 py-4 rounded-2xl hover:bg-slate-100 transition font-medium">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center">
+
+            💳
+
+          </div>
+
+          Ventas
+
+        </button>
+
+        <button
+          class="w-full flex items-center gap-4 px-5 py-4 rounded-2xl hover:bg-slate-100 transition font-medium">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center">
+
+            ⚙️
+
+          </div>
+
+          Configuración
+
+        </button>
+
+      </nav>
+
+      <!-- PROFILE -->
+      <div class="p-5">
+
+        <div
+          class="flex items-center gap-4 p-4 rounded-3xl border border-slate-200 bg-slate-50">
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-black text-lg">
+
+            M
+
+          </div>
+
+          <div>
+
+            <h3 class="font-bold">
+              Manuel
+            </h3>
+
+            <p class="text-sm text-slate-500 mt-1">
+              Administrator
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="flex-1">
+
+      <!-- TOP SECTION -->
+      <section
+        class="px-5 sm:px-8 lg:px-12 py-8 border-b border-slate-200 bg-white">
+
+        <div
+          class="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-8">
+
+          <!-- TITLE -->
+          <div>
+
+            <span
+              class="inline-flex px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-sm font-semibold">
+
+              Dashboard Overview
+
+            </span>
+
+            <h2
+              class="text-4xl sm:text-5xl font-black tracking-tight mt-5 leading-tight">
+
+              Bienvenido de vuelta 👋
+
+            </h2>
+
+            <p
+              class="text-slate-500 mt-5 max-w-2xl text-base sm:text-lg leading-relaxed">
+
+              Gestiona usuarios, monitorea estadísticas y administra
+              tu plataforma desde un panel moderno y profesional.
+
+            </p>
+
+          </div>
+
+          <!-- ACTIONS -->
+          <div
+            class="flex flex-col sm:flex-row gap-4 w-full xl:w-auto">
+
+            <input
+              type="text"
+              placeholder="Buscar..."
+              class="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-slate-900 transition bg-slate-50 sm:w-80"
+            />
+
+            <button
+              class="h-14 px-8 rounded-2xl bg-slate-900 text-white font-semibold hover:scale-[1.02] transition shadow-lg">
+
+              + Nuevo Proyecto
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- CONTENT -->
+      <div class="p-5 sm:p-8 lg:p-12">
+
+        <!-- STATS -->
+        <section
+          class="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-6 mb-10">
+
+          @for (stat of stats; track stat.title) {
+
+            <div
+              class="bg-white border border-slate-200 rounded-3xl p-7 hover:shadow-xl transition duration-300">
+
+              <div class="flex items-start justify-between">
+
+                <div>
+
+                  <p class="text-slate-500 font-medium">
+                    {{ stat.title }}
+                  </p>
+
+                  <h3 class="text-5xl font-black mt-4 tracking-tight">
+                    {{ stat.value }}
+                  </h3>
+
+                </div>
+
+                <div
+                  class="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-xl">
+
+                  ✦
+
+                </div>
+
+              </div>
+
+              <div class="mt-8">
+
+                <span
+                  class="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-semibold">
+
+                  {{ stat.change }} este mes
+
+                </span>
+
+              </div>
+
+            </div>
+
+          }
+
+        </section>
+
+        <!-- GRID -->
+        <section
+          class="grid grid-cols-1 2xl:grid-cols-[1.6fr_0.8fr] gap-6">
+
+          <!-- CHART -->
+          <div
+            class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8">
+
+            <div
+              class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 mb-10">
+
+              <div>
+
+                <h3 class="text-2xl font-black tracking-tight">
+                  Revenue Analytics
+                </h3>
+
+                <p class="text-slate-500 mt-2">
+                  Últimos 7 días
+                </p>
+
+              </div>
+
+              <button
+                class="h-12 px-5 rounded-2xl border border-slate-200 hover:bg-slate-100 transition font-medium">
+
+                Exportar
+
+              </button>
+
+            </div>
+
+            <!-- CHART -->
+            <div class="h-80 flex items-end gap-3 sm:gap-5">
+
+              <div class="w-full rounded-t-3xl bg-slate-900 h-[35%]"></div>
+              <div class="w-full rounded-t-3xl bg-slate-900 h-[55%]"></div>
+              <div class="w-full rounded-t-3xl bg-slate-900 h-[42%]"></div>
+              <div class="w-full rounded-t-3xl bg-slate-900 h-[85%]"></div>
+              <div class="w-full rounded-t-3xl bg-slate-900 h-[65%]"></div>
+              <div class="w-full rounded-t-3xl bg-slate-900 h-[75%]"></div>
+              <div class="w-full rounded-t-3xl bg-slate-900 h-[50%]"></div>
+
+            </div>
+
+          </div>
+
+          <!-- ACTIVITY -->
+          <div
+            class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8">
+
+            <div class="mb-8">
+
+              <h3 class="text-2xl font-black tracking-tight">
+                Actividad reciente
+              </h3>
+
+              <p class="text-slate-500 mt-2">
+                Últimos movimientos
+              </p>
+
+            </div>
+
+            <div class="space-y-5">
+
+              <div
+                class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+
+                <div
+                  class="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center">
+
+                  👤
+
+                </div>
+
+                <div>
+
+                  <h4 class="font-bold">
+                    Nuevo usuario registrado
+                  </h4>
+
+                  <p class="text-sm text-slate-500 mt-1">
+                    Hace 5 minutos
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div
+                class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+
+                <div
+                  class="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center">
+
+                  💳
+
+                </div>
+
+                <div>
+
+                  <h4 class="font-bold">
+                    Pago completado
+                  </h4>
+
+                  <p class="text-sm text-slate-500 mt-1">
+                    Hace 18 minutos
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div
+                class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+
+                <div
+                  class="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center">
+
+                  📦
+
+                </div>
+
+                <div>
+
+                  <h4 class="font-bold">
+                    Producto actualizado
+                  </h4>
+
+                  <p class="text-sm text-slate-500 mt-1">
+                    Hace 1 hora
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</div>
