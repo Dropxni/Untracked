@@ -1,1 +1,379 @@
-<p>home works!</p>,
+<div class="min-h-screen bg-[#020617] text-white overflow-hidden">
+
+  <!-- BACKGROUND -->
+  <div class="fixed inset-0 -z-10">
+
+    <div
+      class="absolute top-0 left-0 w-125 h-125 bg-cyan-500/10 blur-[120px] rounded-full">
+    </div>
+
+    <div
+      class="absolute bottom-0 right-0 w-125 h-125 bg-indigo-500/10 blur-[120px] rounded-full">
+    </div>
+
+  </div>
+
+  <div class="flex">
+
+    <!-- SIDEBAR -->
+    <aside
+      class="hidden lg:flex flex-col w-72 min-h-screen border-r border-white/10 bg-white/3 backdrop-blur-2xl">
+
+      <!-- LOGO -->
+      <div class="px-8 py-8 border-b border-white/10">
+
+        <h1 class="text-4xl font-black tracking-tight">
+          NOVA<span class="text-cyan-400">.</span>
+        </h1>
+
+        <p class="text-slate-400 mt-2 text-sm">
+          Admin Dashboard
+        </p>
+
+      </div>
+
+      <!-- MENU -->
+      <nav class="flex-1 p-5 space-y-2">
+
+        <button
+          class="w-full flex items-center gap-4 px-5 py-4 rounded-2xl bg-cyan-400 text-slate-950 font-bold shadow-2xl shadow-cyan-500/20">
+
+          <div class="w-10 h-10 rounded-xl bg-black/10 flex items-center justify-center">
+            🏠
+          </div>
+
+          Dashboard
+
+        </button>
+
+        <button
+          class="w-full flex items-center gap-4 px-5 py-4 rounded-2xl hover:bg-white/5 transition">
+
+          <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+            📊
+          </div>
+
+          Analytics
+
+        </button>
+
+        <button
+          class="w-full flex items-center gap-4 px-5 py-4 rounded-2xl hover:bg-white/5 transition">
+
+          <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+            👥
+          </div>
+
+          Usuarios
+
+        </button>
+
+        <button
+          class="w-full flex items-center gap-4 px-5 py-4 rounded-2xl hover:bg-white/5 transition">
+
+          <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+            💳
+          </div>
+
+          Ventas
+
+        </button>
+
+        <button
+          class="w-full flex items-center gap-4 px-5 py-4 rounded-2xl hover:bg-white/5 transition">
+
+          <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+            ⚙️
+          </div>
+
+          Configuración
+
+        </button>
+
+      </nav>
+
+      <!-- USER -->
+      <div class="p-5">
+
+        <div
+          class="p-4 rounded-3xl bg-white/3 border border-white/10 flex items-center gap-4">
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-cyan-400 text-slate-950 font-black flex items-center justify-center text-lg">
+            M
+          </div>
+
+          <div>
+            <h3 class="font-semibold">
+              Manuel
+            </h3>
+
+            <p class="text-sm text-slate-400">
+              Administrator
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="flex-1 p-6 lg:p-10">
+
+      <!-- TOPBAR -->
+      <header
+        class="flex flex-col 2xl:flex-row 2xl:items-center 2xl:justify-between gap-6 mb-10">
+
+        <div>
+
+          <p class="uppercase tracking-[0.3em] text-cyan-400 text-sm font-semibold">
+            Overview
+          </p>
+
+          <h2 class="text-5xl font-black mt-3 leading-tight">
+            Dashboard Analytics
+          </h2>
+
+          <p class="text-slate-400 mt-4 max-w-2xl">
+            Monitorea estadísticas, crecimiento de usuarios y rendimiento
+            general de tu aplicación en tiempo real.
+          </p>
+
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="flex flex-wrap gap-4">
+
+          <div class="relative">
+
+            <input
+              type="text"
+              placeholder="Buscar..."
+              class="w-72 bg-white/3 border border-white/10 rounded-2xl py-4 pl-5 pr-5 outline-none focus:border-cyan-400 transition"
+            />
+
+          </div>
+
+          <button
+            class="px-7 py-4 rounded-2xl bg-cyan-400 text-slate-950 font-bold hover:scale-105 transition duration-300 shadow-2xl shadow-cyan-500/20">
+
+            + Crear
+
+          </button>
+
+        </div>
+
+      </header>
+
+      <!-- STATS -->
+      <section
+        class="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-6 mb-10">
+
+        @for (stat of stats; track stat.title) {
+
+          <div
+            class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/3 backdrop-blur-2xl p-7 hover:border-cyan-400/40 transition duration-500">
+
+            <!-- glow -->
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-linear-to-br from-cyan-500/10 to-transparent">
+            </div>
+
+            <div class="relative">
+
+              <div class="flex items-start justify-between">
+
+                <div>
+
+                  <p class="text-slate-400 text-sm">
+                    {{ stat.title }}
+                  </p>
+
+                  <h3 class="text-5xl font-black mt-4">
+                    {{ stat.value }}
+                  </h3>
+
+                </div>
+
+                <div
+                  class="w-14 h-14 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-2xl">
+
+                  ✦
+
+                </div>
+
+              </div>
+
+              <div class="mt-8">
+
+                <span
+                  class="inline-flex px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-400 text-sm font-semibold border border-emerald-500/20">
+
+                  {{ stat.change }} este mes
+
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        }
+
+      </section>
+
+      <!-- CONTENT -->
+      <section class="grid grid-cols-1 2xl:grid-cols-3 gap-6">
+
+        <!-- CHART -->
+        <div
+          class="2xl:col-span-2 rounded-3xl border border-white/10 bg-white/3 backdrop-blur-2xl p-8">
+
+          <div class="flex items-center justify-between mb-10">
+
+            <div>
+
+              <h3 class="text-2xl font-bold">
+                Revenue Statistics
+              </h3>
+
+              <p class="text-slate-400 mt-2">
+                Últimos 7 días
+              </p>
+
+            </div>
+
+            <button
+              class="px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 transition border border-white/10">
+
+              Exportar
+
+            </button>
+
+          </div>
+
+          <!-- CHART -->
+          <div class="h-87.5 flex items-end gap-5">
+
+            <div class="w-full rounded-t-3xl bg-linear-to-t from-cyan-500 to-cyan-300 h-[35%]"></div>
+            <div class="w-full rounded-t-3xl bg-linear-to-t from-cyan-500 to-cyan-300 h-[55%]"></div>
+            <div class="w-full rounded-t-3xl bg-linear-to-t from-cyan-500 to-cyan-300 h-[45%]"></div>
+            <div class="w-full rounded-t-3xl bg-linear-to-t from-cyan-500 to-cyan-300 h-[85%]"></div>
+            <div class="w-full rounded-t-3xl bg-linear-to-t from-cyan-500 to-cyan-300 h-[60%]"></div>
+            <div class="w-full rounded-t-3xl bg-linear-to-t from-cyan-500 to-cyan-300 h-[75%]"></div>
+            <div class="w-full rounded-t-3xl bg-linear-to-t from-cyan-500 to-cyan-300 h-[50%]"></div>
+
+          </div>
+
+        </div>
+
+        <!-- ACTIVITY -->
+        <div
+          class="rounded-3xl border border-white/10 bg-white/3 backdrop-blur-2xl p-8">
+
+          <div class="mb-8">
+
+            <h3 class="text-2xl font-bold">
+              Actividad reciente
+            </h3>
+
+            <p class="text-slate-400 mt-2">
+              Últimos movimientos
+            </p>
+
+          </div>
+
+          <div class="space-y-5">
+
+            <div
+              class="p-5 rounded-2xl bg-slate-900/50 border border-white/10">
+
+              <div class="flex items-center gap-4">
+
+                <div
+                  class="w-12 h-12 rounded-2xl bg-cyan-400/10 flex items-center justify-center text-cyan-400">
+                  👤
+                </div>
+
+                <div>
+
+                  <h4 class="font-semibold">
+                    Nuevo usuario registrado
+                  </h4>
+
+                  <p class="text-sm text-slate-400 mt-1">
+                    Hace 5 minutos
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div
+              class="p-5 rounded-2xl bg-slate-900/50 border border-white/10">
+
+              <div class="flex items-center gap-4">
+
+                <div
+                  class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                  💰
+                </div>
+
+                <div>
+
+                  <h4 class="font-semibold">
+                    Pago procesado
+                  </h4>
+
+                  <p class="text-sm text-slate-400 mt-1">
+                    Hace 20 minutos
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div
+              class="p-5 rounded-2xl bg-slate-900/50 border border-white/10">
+
+              <div class="flex items-center gap-4">
+
+                <div
+                  class="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+                  📦
+                </div>
+
+                <div>
+
+                  <h4 class="font-semibold">
+                    Nuevo producto agregado
+                  </h4>
+
+                  <p class="text-sm text-slate-400 mt-1">
+                    Hace 1 hora
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</div>
