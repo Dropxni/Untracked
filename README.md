@@ -1,59 +1,118 @@
 # Untracked
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
+Aplicación web desarrollada con Angular 21, enfocada en una arquitectura modular con componentes, páginas, servicios, guards, pipes, validadores e interfaces.
 
-## Development server
+## Tecnologías utilizadas
 
-To start a local development server, run:
+- Angular 21
+- TypeScript 5.9
+- Tailwind CSS 4
+- RxJS
+- Vitest
+- PostCSS
+
+## Estructura del proyecto
+
+```bash
+.
+├── auth/
+├── components/
+├── guards/
+├── interfaces/
+├── pages/
+│   └── home/
+│       ├── home.html
+│       └── home.ts
+├── pipes/
+├── public/
+├── services/
+├── shared/
+├── src/
+├── validator/
+├── angular.json
+├── package.json
+└── README.md
+```
+
+## Instalación
+
+Clona el repositorio:
+
+```bash
+git clone https://github.com/Dropxni/Untracked.git 
+```
+
+Entra al proyecto:
+
+```bash
+cd untracked
+```
+
+Instala las dependencias:
+
+```bash
+npm install
+```
+
+## Ejecución en desarrollo
+
+```bash
+npm start
+```
+
+También puedes usar:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+La aplicación estará disponible normalmente en:
 
 ```bash
-ng generate component component-name
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Scripts disponibles
+
+| Comando | Descripción |
+|---|---|
+| `npm start` | Ejecuta el servidor de desarrollo |
+| `npm run build` | Compila el proyecto para producción |
+| `npm run watch` | Compila en modo observación para desarrollo |
+| `npm test` | Ejecuta las pruebas |
+
+## Compilación
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
+Los archivos generados se almacenan en la carpeta de salida configurada por Angular.
 
-To build the project run:
+## Pruebas
 
 ```bash
-ng build
+npm test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+El proyecto utiliza Vitest para la ejecución de pruebas.
 
-## Running unit tests
+## Formato de código
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+El proyecto utiliza Prettier con la siguiente configuración principal:
 
-```bash
-ng test
-```
+- Ancho máximo de línea: `100`
+- Comillas simples
+- Parser especial para archivos HTML de Angular
 
-## Running end-to-end tests
+## Estado del proyecto
 
-For end-to-end (e2e) testing, run:
+🚧 En desarrollo
 
-```bash
-ng e2e
-```
+## Autor
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Manuel Ambrosio
 
-## Additional Resources
+## Licencia
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este proyecto es privado.
